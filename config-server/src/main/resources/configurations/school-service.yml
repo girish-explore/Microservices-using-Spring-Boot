@@ -1,6 +1,7 @@
 server:
   port: 8091
 
+# properties for database connection Feign client
 spring:
   application:
     hostname: localhost
@@ -15,11 +16,8 @@ spring:
       ddl-auto: update
     show-sql: true
 
+# Registration in service discovery
 eureka:
   client:
     service-url:
       defaultzone: http://${spring.application.hostname}:8761/eureka
-
-application:
-  config:
-    students-url: http://localhost:8222/api/v1/students

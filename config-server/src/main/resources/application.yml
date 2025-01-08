@@ -6,6 +6,7 @@ spring:
     active: native
   application:
     name: config-server
+# Location for all services properties resources/configurations
   cloud:
     config:
       server:
