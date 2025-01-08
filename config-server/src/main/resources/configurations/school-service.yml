@@ -1,0 +1,25 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    hostname: localhost
+    config:
+      students-url: http://${spring.application.hostname}:8090/api/v1/students
+  datasource:
+    url: jdbc:mysql://localhost:3306/online_banking_db
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultzone: http://${spring.application.hostname}:8761/eureka
+
+application:
+  config:
+    students-url: http://localhost:8222/api/v1/students

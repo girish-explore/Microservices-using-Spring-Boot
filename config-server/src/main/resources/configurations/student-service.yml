@@ -1,0 +1,17 @@
+server:
+  port: 8090
+spring:
+  application:
+    hostname: localhost
+  datasource:
+    url: jdbc:mysql://${spring.application.hostname}:3306/online_banking_db
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultzone: http://${spring.application.hostname}:8761/eureka
