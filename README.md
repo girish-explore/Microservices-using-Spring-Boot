@@ -1,4 +1,5 @@
 Project Components
+
 API Gateway
 The API Gateway acts as the single entry point for all client requests. It handles request management, routing, and forwarding client calls to the appropriate microservices. Additionally, it ensures security, load balancing, and centralized API management.
 
