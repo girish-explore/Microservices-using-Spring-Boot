@@ -2,7 +2,6 @@ package com.microservice.student.controller;
 
 import com.microservice.student.entity.Student;
 import com.microservice.student.service.StudentService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

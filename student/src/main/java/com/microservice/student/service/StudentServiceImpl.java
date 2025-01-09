@@ -2,7 +2,6 @@ package com.microservice.student.service;
 
 import com.microservice.student.entity.Student;
 import com.microservice.student.repository.StudentRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

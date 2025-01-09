@@ -30,8 +30,9 @@ public class SchoolServiceImpl implements SchoolService{
 
     @Override
     public FullSchoolResponse fullSchoolResponse(Integer schoolId) {
-        var school= schoolRepository.findById(schoolId).
-                orElse(School.builder().name("NOT FOUND").email("NOT FOUND").build());
+        var school= schoolRepository.findBySchoolId(schoolId);
+        if (school==null) return FullSchoolResponse.builder().name("NOT FOUND").
+                email("NOT FOUND").students(null).build();
         var students= studentclient.findAllStudentsBySchool(schoolId);
         return FullSchoolResponse.builder().name(school.getName()).
                 email(school.getEmail()).students(students).build();

@@ -12,3 +12,8 @@ spring:
       server:
         native:
           search-locations: classpath:/configurations
+# Properties for Centralized location in git
+#      git:
+#        uri: https://github.com/whatever/config-server-repo
+#        clone-on-start: true
+#        default-label: main
